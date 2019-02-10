@@ -4,6 +4,7 @@
 
 * Load Optimized Defaults
 * M.I.T. (You can ignore the M.I.T. settings section here, if you don’t have the same memory frequency I have. I did this because I wanted to be able to enable XMP with plans to overclock my CPU later, but this created a problem during boot up where the USB drives would get ejected when recovering from sleep-wake. The solution to this was to enable XMP but dial down the memory frequency to 2666 MHz as I have done below. However, this part is unnecessary if you don’t care about getting the best performance out of your memory).
+
    * >\-> Memory Frequency Settings
    * >\-> Extreme Memory Profile (X.M.P.) -> Profile1
    * >\-> System Memory Multiplier -> 26.66
