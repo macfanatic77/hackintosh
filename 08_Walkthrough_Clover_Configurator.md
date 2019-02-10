@@ -41,8 +41,10 @@ If you want the iGPU to run headless (without display) used only for compute tas
 
 In order for FCPX to run efficiently, Intel QuickSync should be enabled, and this as well as other functions, rely on the iGPU to offload the main GPU. Thus, I chose to run my iGPU in headless mode by setting the parameter:
 
-```AAPL;ig-platform-id 	0300923E	DATA
-Device-id		923E0000	DATA```
+```
+AAPL;ig-platform-id 	0300923E	DATA 
+Device-id		923E0000	DATA
+```
 
 We will discuss this more under (Enabling Headless iGPU) under *Troubleshooting* section.
 We also add 2 more properties, `framebuffer-patch-enable` and `framebuffer-stolenmem`. The first enables patching via *WhateverGreen.kext*, and the second sets the min stolen memory to 19MB.
@@ -61,9 +63,11 @@ Alternatively, you could also do the same by choosing custom entries. If you cho
 
 To get the UUID of a drive to hide, you can use the following terminal command:
 
-```Diskutil list
+```
+Diskutil list
 
-diskutil info diskXsY | grep -i "Partition UUID" | rev | cut -d' ' -f 1 | rev```
+diskutil info diskXsY | grep -i "Partition UUID" | rev | cut -d' ' -f 1 | rev
+```
 
 Make sure to replace diskXsY with the actual disk number of the volume you'd like to hide.
 
