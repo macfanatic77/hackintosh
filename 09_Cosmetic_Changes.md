@@ -6,7 +6,6 @@ The following section deals with tricks you can use to change the Apple Menu -> 
 
 This section will change the reported hardware model and production year on the main “About This Mac” page. On a Hackintosh this page will usually report the Model you have selected in your SMBIOS settings, but you might want it to say something different. 
 
-![](Pictures/IMG_20190209_184557.jpg)
 
 1) Open a Finder window and navigate to your home User folder (the one containing your Documents, Pictures, Movies, etc.)
 
