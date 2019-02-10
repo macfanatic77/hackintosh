@@ -1,5 +1,5 @@
 # hackintosh
-# *** A GUIDE TO A VANILLA HACKINTOSH FROM SCRATCH ***
+# A GUIDE TO A VANILLA HACKINTOSH FROM SCRATCH
 My Vanilla style Hackintosh Editing Beast. i7-8700k Overclocked to 4.9 GHz, Gigabyte Z370 Gaming 5, VEGA 64 Frontier Edition.
 
 This guide was something I put together as I was trying to build a fully functional hackintosh for 4k Video editing. I am a primary Final Cut Pro X user, and my 2013-late Macbook Pro was beginning to show its age with rendering, timeline scrubbing so I thought it was time to upgrade to an iMac Pro until I was horrified when I found the prices I would be forced to pay.
