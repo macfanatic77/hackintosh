@@ -11,4 +11,5 @@ This information did not come out of thin air. I am very grateful to the wonderf
 
 *DISCLAIMER : I will begin by saying that while I wrote this piece from start to scratch, there are segments that I directly copied (for my convenience) off other people’s work and annotated with my own thoughts. This is by no means exhaustive. However, I have credited and linked every one of those posts when I have done so. I only provide this as a public service and if this offends anyone, all I ask is that the moderators remove it.*
 
-[build]http://github.com/macfanatic77/hackintosh/pictures/IMG_20190209_184557.jpg
+[build]http://github.com/macfanatic77/hackintosh/raw/master/pictures/IMG_20190209_184557.jpg
+      
