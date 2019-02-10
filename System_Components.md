@@ -10,7 +10,8 @@ The most important part of building any hackintosh is choosing the right compone
 7. NZXT h500i Case
 8. Fenvi FV-T919 Bluetooth/WiFi PCIe card 
 
-* Notes about system components for newbies *
+
+## Notes about system components for newbies ##
 
 If you are new, please please find components that someone else has build a system with. It will save you a huge headache down the road. The most important components are the **motherboard**. Typically Gigabyte and ASUS boards are preferred and even then, there are specific boards that work better than others. For example, the Z370 Chipset boards of the AORUS series were very well seasoned in both Hackintoshes running High Sierra and Mojave, but as of late, Z390 boards are also apparently delivering fully functional hackintoshes. At the time of my build, the Z370 boards were going out of stock but after trying around at multiple vendors I was able to find an open-box motherboard at a hefty discount and it worked great.
 
