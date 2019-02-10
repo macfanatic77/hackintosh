@@ -8,7 +8,7 @@ This section will change the reported hardware model and production year on the 
 
 1) Open a Finder window and navigate to your home User folder (the one containing your Documents, Pictures, Movies, etc.)
 
-2) Inside that, open the Library folder. If you cannot see it, it may be hidden. You can find it with our guide. Do not confuse it with /Library by mistake, it must be /Users/YOUR_USERNAME/Library (where YOUR_USERNAME is whatever your username is in your hackintosh).
+2) Inside that, open the Library folder. If you cannot see it, it may be hidden. You can find it with our guide. Do not confuse it with `/Library` by mistake, it must be `/Users/YOUR_USERNAME/Library`(where YOUR_USERNAME is whatever your username is in your hackintosh).
 
 3) Inside the folder, open Preferences and look for the file entitled `com.apple.SystemProfiler.plist`.
 
