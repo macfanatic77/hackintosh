@@ -2,7 +2,8 @@
 # A GUIDE TO A VANILLA HACKINTOSH FROM SCRATCH
 My Vanilla style Hackintosh Editing Beast. i7-8700k Overclocked to 4.9 GHz, Gigabyte Z370 Gaming 5, VEGA 64 Frontier Edition.
 
-![alt-text][build]
+![](Pictures/IMG_20190209_184557.jpg)
+      
 
 This guide was something I put together as I was trying to build a fully functional hackintosh for 4k Video editing. I am a primary Final Cut Pro X user, and my 2013-late Macbook Pro was beginning to show its age with rendering, timeline scrubbing so I thought it was time to upgrade to an iMac Pro until I was horrified when I found the prices I would be forced to pay.
 So I thought I would go the hackintosh route. I used the famous vanilla hackintosh subreddit here to get my feet wet and over the course of two weeks read pretty much every article I could find on the subject. After a lot of searching I managed to have a good understanding of how hackintoshes (and MacOS) works with the hardware and started writing things down. After a lot of time (close to a month of tinkering) I managed to complete this project with a *fully functional* hackintosh that cuts through 4K footage like butter. 
@@ -11,5 +12,4 @@ This information did not come out of thin air. I am very grateful to the wonderf
 
 *DISCLAIMER : I will begin by saying that while I wrote this piece from start to scratch, there are segments that I directly copied (for my convenience) off other people’s work and annotated with my own thoughts. This is by no means exhaustive. However, I have credited and linked every one of those posts when I have done so. I only provide this as a public service and if this offends anyone, all I ask is that the moderators remove it.*
 
-[build]http://raw.github.com/macfanatic77/hackintosh/Pictures/IMG_20190209_184557.jpg
       
