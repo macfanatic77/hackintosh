@@ -6,8 +6,8 @@
 2. Audio
 3. APFS
 4. Sleep/Wake
-5. Headless iGPU with Native Support for Quicklook, Preview, JPG, Final Cut Pro X
-6. All USB ports functioning at USB 3 speeds
+5. Headless iGPU with Native Support for QuickSync, Preview, JPG, Final Cut Pro X
+6. All USB 3.0 ports functioning at USB 3 speeds
 7. iServices (iMessage, Appstore, Facetime, Handoff, Continuity)
 8. WiFi
 9. Bluetooth (via Broadcomm PCIe card)
@@ -18,7 +18,7 @@
 
 # What Doesn’t Work
 
-1. USB-c ports — Don’t work. I believe its because USB-C ports in my motherboard are run by an ASMedia controller and all the support I am finding is for Intel, which support the other USB 2 and 3 ports.
+1. USB-C/USB 3.1 gen2 ports — Don’t work. I believe its because USB-C ports in my motherboard are run by an ASMedia controller and all the support I am finding is for Intel, which support the other USB 2 and 3 ports.
 2. iGPU HDMI or DVI output during installation. Seems to be a common issue and it doesn’t matter to me since I installed via Vega Card.
 3. Built-in WiFi — Didn’t work (MacOS didn’t even recognize that the system had WiFi).
 4. Onboard Bluetooth — Recognized by MacOS, but was acting weird and not connecting to devices, until I permanently disabled the port on the motherboard and enabled the USB port for the Bluetooth from my PCIe card.
