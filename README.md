@@ -17,7 +17,7 @@ So I thought I would go the hackintosh route. I used the famous vanilla hackinto
 
 This information did not come out of thin air. I am very grateful to the wonderful folks on Reddit's r/hackintosh subreddit as well as the good contributors at [TonyMacx86.com](https://tonymacx86.com/), and the users at [InsanelyMac.com](https://insanelymac.com/)  all of whom were tremendously helpful. At the end of it all, I wanted to publish my guide, both as a template of how to build a hackintosh and also so that it provides an all-in-one education to anyone who wants to learn the vanilla method. 
 
-*DISCLAIMER : I will begin by saying that while I wrote this piece from start to scratch, there are segments that I directly copied (for my convenience) off other people’s work and annotated with my own thoughts. This is by no means intended to stand alone as my own work, and I have credited and linked every one of those posts when I have borrowed segments from the work of others. I only provide this as a public service.*
+*DISCLAIMER : I will begin by saying that while I wrote this piece from start to finish, there are segments that I directly copied (for my convenience) off other people’s work and annotated with my own thoughts. This is by no means intended to stand alone as my own work, and I have credited and linked every one of those posts when I have borrowed segments from the work of others. I only provide this as a public service.*
 
 This guide has been divided into sections which include a tutorial on how to install MacOS on a PC as well as some educational content associated with the process. Your mileage may vary.
 
