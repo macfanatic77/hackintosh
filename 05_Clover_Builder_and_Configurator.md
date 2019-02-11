@@ -70,8 +70,9 @@ Apple does not recognize the Intel WiFi chip so I am using a BCM93460 FenVi FV-T
 Handling USB issues ended up being one of my biggest problems but it was resolved, thanks to the hard work of some wonderful folks who had created some amazing tools (CorpNewt, Rehabman) . See my *[Troubleshooting](07_Troubleshooting.md)* section.
 
 So my final kext collection copied into the /EFI/Clover/kexts/other was as follows: You will note that there are multiple 10.xx folders in the kexts folder and a single “Other” folder. I deleted all of the other 10.xx folders since they are version specific, and the “Other” folder is universally accessed. Which is what I want.
+
 ```
-    1. AppleALC.kext 
+   1. AppleALC.kext 
     2. IntelMausiEthernet.kext
     3. Lilu.kext
     4. WhateverGreen.kext
@@ -85,7 +86,8 @@ So my final kext collection copied into the /EFI/Clover/kexts/other was as follo
     12. GenericUSBXHCI.kext — I’m not sure whether this is redundant, but I read that this can enable injection of non-Intel USB ports. I have 2 USBc ports that are regulated via the ASMedia controller, so I activated them anyways. However it doesn’t appear to have worked. So you perhaps don’t need this.
     ```
     
-    
+ ```
+ 
 # Changing Config.Plist
 
 The config.plist is the main configuration file for the Hackintosh. In order to minimize the effects of it, I am going to delete the existing one on the EFI partition and import a new config.plist from a source.
