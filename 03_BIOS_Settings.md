@@ -5,7 +5,7 @@
 * Load Optimized Defaults
 
 <details>
-  <summary> **M.I.T** - Check this settings only if you plan to overclock on this board. For most people this part is unnecessary. Click the arrowhead to the left to look at how the M.I.T. settings should be configured.</summary>
+  <summary> M.I.T - Check this settings only if you plan to overclock on this board. For most people this part is unnecessary. Click the arrowhead to the left to look at how the M.I.T. settings should be configured.</summary>
   
 * M.I.T. (You can ignore the M.I.T. settings section here, if you don’t have the same memory frequency I have. I did this because I wanted to be able to enable XMP with plans to overclock my CPU later, but this created a problem during boot up where the USB drives would get ejected when recovering from sleep-wake. The solution to this was to enable XMP but dial down the memory frequency to 2666 MHz as I have done below. However, this part is unnecessary if you don’t care about getting the best performance out of your memory).
 
