@@ -2,11 +2,6 @@
 
 In the Vanilla method the objective is to install **all of the configuration** for the entire MacOS inside the EFI partition in the bootable drive (whether this is the USB drive, or eventually the hard drive in which your OS resides). When this is done, the **bootloader** will read the configuration for your hackintosh off a bunch of files that will be placed in the EFI partition and **inject** this information into the MacOS operating system as it is loading. In a typical Mac, the hardware (the special chips that Apple would install) do this part and feed this information to MacOS so that the operating system knows that this is a genuine Mac and also knows the configuration of the system (whether it is an iMac, Macbook Pro or Mac Mini etc). Since we do not have that luxury in our hackintosh, the EFI partition will need to house the files and the configuration information that we will feed into the MacOS operating system when it starts. 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-
-&#x200B;
-
 The major advantage of this particular style of installation (Vanilla method) is that because the "spoof" files and configuration data are all stored in a separate, isolated EFI partition, the normal MacOS partition can function completely normally in any real Mac. I personally liked this method a lot because it is much easier to troubleshoot and, (at least in theory) unless the MacOS upgrades change their implementation of certain device drivers etc, the upgrade should not break your installation. If something goes wrong, you also know where and what to change because literally every change you implement has to be in that EFI partition. 
 
   
