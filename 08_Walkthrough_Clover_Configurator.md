@@ -73,12 +73,16 @@ We also add 2 more properties, `framebuffer-patch-enable` and `framebuffer-stole
 This section sets parameters for the Clover Boot Manager (CBM) GUI that shows up when you first enter. There is nothing major here to remember since a lot of what happens here is cosmetic.
 
 **Scan**: The only settings I've tweaked on this page are the Scan settings. I've selected Custom, then checked everything except Legacy and Kernel. This just omits some of the unbootable entries in Clover to clean up the menu.
+
 **Hide Volumes**: I haven't added anything here, but you can hide unwanted volumes here. You can do so by either adding the volume's name, or UUID. To hide extra APFS entries, add the following to this list:
+
 `Preboot` 
 `Recovery`
 
+
 To hide all Recovery partitions, add `Recovery` to the list.
 Alternatively, you could also do the same by choosing custom entries. If you choose this option, you can specify which boot drives to show on clover at startup. Since I have a Windows 10 partition, for example, I can open up the options for this, as shown below. Under this, I  directly choose the UUID for the partition (**NOTE**: this is a partition UUID, not Volume UUID).
+
 
 To get the UUID of a drive to hide, you can use the following terminal command:
 
