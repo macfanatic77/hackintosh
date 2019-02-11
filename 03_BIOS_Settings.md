@@ -1,6 +1,6 @@
 ## BIOS Settings (Gigabyte BIOS F11)
 
-**Note:** I initially updated the BIOS to version F12c which is the latest from Gigabyte. The version that my motherboard shipped with was F6. This created some problems where the system would hang during very first boot up of MacOS (see *Troubleshooting*).
+**Note:** I initially updated the BIOS to version F12c which is the latest from Gigabyte. The version that my motherboard shipped with was F6. This created some problems where the system would hang during very first boot up of MacOS (see *[Troubleshooting](07_Troubleshooting.md)*).
 
 * Load Optimized Defaults
 * M.I.T. (You can ignore the M.I.T. settings section here, if you don’t have the same memory frequency I have. I did this because I wanted to be able to enable XMP with plans to overclock my CPU later, but this created a problem during boot up where the USB drives would get ejected when recovering from sleep-wake. The solution to this was to enable XMP but dial down the memory frequency to 2666 MHz as I have done below. However, this part is unnecessary if you don’t care about getting the best performance out of your memory).
