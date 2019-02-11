@@ -1,6 +1,9 @@
-# hackintosh
 # A GUIDE TO A VANILLA HACKINTOSH FROM SCRATCH
-My Vanilla style Hackintosh Editing Beast. i7-8700k Overclocked to 4.9 GHz, Gigabyte Z370 Gaming 5, VEGA 64 Frontier Edition.
+
+## My guide on Vanilla style Hackintosh 4k Video Editing Machine. 
+### i7-8700k Overclocked to 4.9 GHz 
+### Gigabyte Z370 Gaming 5 
+### VEGA 64 Frontier Edition
 
 ![](Pictures/IMG_20190209_184557.jpg)
       
