@@ -16,8 +16,9 @@
    * \-> Memory Odd Ratio -> Auto
    * \-> Memory Boot Mode -> Normal
    * \-> Memory Frequency -> 2666 MHz
+   </details>
    
-</details>
+   
    
 * BIOS
    * \-> Security Options -> System
