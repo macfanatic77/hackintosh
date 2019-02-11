@@ -4,7 +4,7 @@
 * At the BIOS screen, choose boot drive and select the USB drive.
 * **Boot from the USB drive** on Clover.
 * Now you will probably see verbose text, and if everything goes right you will get to the screen that states “Please Choose your Language”
-* Incidentally, this is where I hit my first problem. Please see ( System Hangs during First Boot even before the First Graphics Screen was visible )  Under *Troubleshooting*.
+* Incidentally, this is where I hit my first problem. Please see [*Troubleshooting*](07_Troubleshooting.md).
 * Once you have accepted the license agreement, and are greeted with the first menu, instead of choosing “Install MacOS”, instead choose “Start Disk Utility”.
 * Under Disk Utility, select the drive that you plan to install MacOS into.
 * Format this drive in **APFS format**.
