@@ -111,7 +111,6 @@ Checkboxes: We have a couple checkboxes selected here:
 
 
 ## Rt Variables 
-![](Pictures/cc_rtvariables.png)
 
 The next three sections, Rt Variables, SMBIOS, System Parameters, have to do with setting up System Integrity Protection, iMessage and other iServices. I won’t get into the details of this here, so read up on the trouble shooting section about setting up SMBIOS and iServices. Also for privacy reasons, I am not going to display the screenshots since it contains identifiers specific to my machine.
 
