@@ -1,6 +1,8 @@
 ## Online Guides I Used
 
-* \_r\_Hackintosh Vanilla Guide ([Getting Started - /r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/))
+Below find a list of outside sources I utilized to learn about this process. If you have time, I encourage your read up on this as much as possible. One of the fun parts of this process is learning about how a Mac and a hackintosh works and then troubleshooting and putting it together.
+
+* r/Hackintosh Vanilla Guide ([Getting Started - /r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/))
 * u/cmer [GitHub - cmer/gigabyte-z390-aorus-master-hackintosh: A guide to build your own Hackintosh based on Gigabyte Z390 Aorus Master](https://github.com/cmer/gigabyte-z390-aorus-master-hackintosh)
 * Gigabyte Z370 Gaming 5, 4K RX 580 - 10.13.4 SSDT [SUCCESS Gigabyte Z370 Gaming 5 - 4k RX 580 - 10.13.4 - SSDT | tonymacx86.com](https://www.tonymacx86.com/threads/success-gigabyte-z370-gaming-5-4k-rx-580-10-13-4-ssdt.250028/)
 * Morganaut’s Build a Perfect Hackintosh [Build a Perfect Hackintosh - Beginners Tutorial - YouTube](https://www.youtube.com/watch?v=fA9AotXqkqA&t=781s) — An excellent starting point, but I used this only as a springboard and ended up changing much of the content. This tutorial, while great because of its simplicity, does not enable a lot of features you can get working with a little bit of tweaking.
