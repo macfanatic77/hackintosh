@@ -1,5 +1,7 @@
 # Changing "About This Mac"
 
+![](Pictures/aboutthismac.png)
+
 The following section deals with tricks you can use to change the Apple Menu -> About This Mac, to say literally whatever you want. It does not damage or change the hackintosh in a permanent way and therefore is applying a cosmetic change.
 
 ## Changing Mac Information
