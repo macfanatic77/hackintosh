@@ -22,6 +22,10 @@ This distinction is important because we can set DSDT and SSDT patches to modify
 The SSDT table is seen on the bottom right on the Boot secion for Clover Configurator — SSDT-UIAC.aml is a file we will create later to specify our USB devices.
 
 ## Boot
+
+![](Pictures/cc_boot.png)
+###### Boot section of Clover
+
  - These set of options specify what happens when the system boots. Under arguments, you may want to check the following:
  - `Verbose (-v)`: Provides verbose mode.
  - `Slide=0` : unclear to me what this exactly does, but I found on several forums that the issue of USB drives getting ejected was avoided with this and setting `darkwake=on`. I chose a different way to avoid this USB drive ejection issue by changing my memory frequency. I am guessing both options work, but give it a go and see.
@@ -33,7 +37,13 @@ The SSDT table is seen on the bottom right on the Boot secion for Clover Configu
  - `DefaultBootVolume` : This uses NVRAM to remember which volume was last booted by Clover and auto selects the same volume for booting.
 - `TimeOut` : This is the number of seconds before the DefaultBootVolume auto boots. Setting this to -1 avoids all timeout, or to 0 to skip the GUI entirely. If set to 0, you can press any key at the boot to get to the GUI to show back up.
 
+
 ## Devices
+
+![](Pictures/cc_devices.png)
+###### Boot section of Clover
+
+
 - We are going to skip ahead to this section. This is a very important section also. Pay attention to the bottom right, and choose properties. This is where we will be changing some parameters associated with activating a headless iGPU.
 - The primary purpose of this section is to handle property injection for the WhateverGreen.kext here. Some key things to note here:
 
@@ -54,7 +64,11 @@ Device-id		923E0000	DATA
 We will discuss this more under (Enabling Headless iGPU) under *Troubleshooting* section.
 We also add 2 more properties, `framebuffer-patch-enable` and `framebuffer-stolenmem`. The first enables patching via *WhateverGreen.kext*, and the second sets the min stolen memory to 19MB.
 
+
 ## GUI
+
+![](Pictures/cc_gui.png)
+###### GUI Section of Clover
 
 This section sets parameters for the Clover Boot Manager (CBM) GUI that shows up when you first enter. There is nothing major here to remember since a lot of what happens here is cosmetic.
 
@@ -76,7 +90,11 @@ diskutil info diskXsY | grep -i "Partition UUID" | rev | cut -d' ' -f 1 | rev
 
 Make sure to replace diskXsY with the actual disk number of the volume you'd like to hide.
 
+
 ## Kernel and Kext Patches
+
+![](Pictures/cc_kernelpatches.png)
+###### Kernel and Kext Patches Section in Clover
 
 This screen shows a series of kext patches that were applied. I believe a lot of these kext patches have to do with increasing the port limit during various iterations of MacOS 10.x.x so as far as I am concerned the one that matters is really the AppleAHCIPort. This last one acts as an orange icons fix - when internal drives are hotpluggable, and treated as external drives. I believe the others can be removed safely (although I did not). For more information on what this is accomplishing, see my troubleshooting section on Custom SSDT for USB 2.0 and 3.0.
 
@@ -85,10 +103,12 @@ Checkboxes: We have a couple checkboxes selected here:
 `KernelPM` - this setting prevents writing to MSR 0xe2 which can prevent a kernel panic at boot.
 
 ## Rt Variables 
+![](Pictures/cc_rtvariables.png)
 
 The next three sections, Rt Variables, SMBIOS, System Parameters, have to do with setting up System Integrity Protection, iMessage and other iServices. I won’t get into the details of this here, so read up on the trouble shooting section about setting up SMBIOS and iServices. Also for privacy reasons, I am not going to display the screenshots since it contains identifiers specific to my machine.
 
 ## System Parameters
+![](Pictures/cc_systemparameters.png)
 
 The only real important thing here is to check the box that states `Inject kexts`. This essentially tells the system to inject any and all kexts to the loading MacOS.
 `InjectSystemID` : This is also checked. This tells Clover to set the SmUUID as the `System-ID` at boot. This is again reportedly important to get iServices working properly.
@@ -98,12 +118,15 @@ The only real important thing here is to check the box that states `Inject kexts
 There are several clover tools that we will be using regularly.
 
 ### Mount EFI 
+![](Pictures/cc_mountefi.png)
 This screen helps mount any EFI partitions we need to make changes to the _EFI_Clover folder, for example.
 
 ### Install Drivers 
+![](Pictures/cc_installdrivers.png)
 This tool helps you install the latest version of any UEFI drivers. Note the green indicators under the Drivers UEFI 64-Bit section. The Drivers BIOS 64 Bit are for BIOS based motherboards, and these days virtually everything is UEFI based.
 
 ### Kexts Installer 
+![](Pictures/cc_kextsinstaller.png)
 This is an easy utility to install Kexts directly from Clover. A couple of things to remember: 
 1. Always set the OS version (top right) to “Other”. To avoid conflict, I actually delete all the other OS folders in the /EFI/clover/kexts/  folder so that the only one remaining is /EFI/clover/kexts/other/.
 
