@@ -1,6 +1,6 @@
 # TROUBLESHOOTING
 
-This section represents my log of issues that I ran into and how I fixed each one of them. I am including this as a spoiler so open it up and read about them only if you had the same problems. Otherwise, you can continue on. It is obvious that some of these problems are specific to my build and may not apply to you. If you run into problems, post the questions on various hackintosh forums and ask someone. Search google. There is an excellent chance that someone else had the very same problem you did and may have found a solution.
+This section represents my log of issues that I ran into and how I fixed each one of them.  It is obvious that some of these problems are specific to my build and may not apply to you. If you run into problems, post the questions on various hackintosh forums and ask someone. Search google. There is an excellent chance that someone else had the very same problem you did and may have found a solution.
 
 ## Settings Changes were NOT taking effect after reboot.
  
