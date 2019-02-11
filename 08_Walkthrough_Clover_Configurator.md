@@ -19,7 +19,7 @@ This distinction is important because we can set DSDT and SSDT patches to modify
  - Change GFX0 to IGPU
  - Change HDAS to HDEF
 
-The SSDT table is seen on the bottom right on the Boot secion for Clover Configurator — SSDT-UIAC.aml is a file we will create later to specify our USB devices.
+The SSDT table is seen on the bottom right on the Boot secion for Clover Configurator — SSDT-UIAC.aml is a file we will create later to specify our USB devices. You don't need to bother yourself about this part. Read the section on *Troubleshooting* to understand how an SSDT file is created to map the USB ports.
 
 ## Boot
 
