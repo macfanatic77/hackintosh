@@ -1,8 +1,5 @@
 # A GUIDE TO A VANILLA HACKINTOSH FROM SCRATCH
 
-### My guide on Vanilla style Hackintosh 4k Video Editing Machine. 
-### Intel i7-8700k Overclocked to 4.9 GHz + Gigabyte Z370 Gaming 5 + RX Vega 64 Frontier Edition GPU
-
 ![](Pictures/IMG_20190209_184557.jpg)
       
 
