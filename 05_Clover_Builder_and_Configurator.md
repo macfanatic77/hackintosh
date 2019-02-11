@@ -72,7 +72,7 @@ Handling USB issues ended up being one of my biggest problems but it was resolve
 So my final kext collection copied into the /EFI/Clover/kexts/other was as follows: You will note that there are multiple 10.xx folders in the kexts folder and a single “Other” folder. I deleted all of the other 10.xx folders since they are version specific, and the “Other” folder is universally accessed. Which is what I want.
 
 ```
-   1. AppleALC.kext 
+    1. AppleALC.kext 
     2. IntelMausiEthernet.kext
     3. Lilu.kext
     4. WhateverGreen.kext
@@ -84,7 +84,7 @@ So my final kext collection copied into the /EFI/Clover/kexts/other was as follo
     10. USBInjectAll.kext
     11. XHCI-unsupported.kext
     12. GenericUSBXHCI.kext — I’m not sure whether this is redundant, but I read that this can enable injection of non-Intel USB ports. I have 2 USBc ports that are regulated via the ASMedia controller, so I activated them anyways. However it doesn’t appear to have worked. So you perhaps don’t need this.
-    ```
+   
     
  ```
  
@@ -92,14 +92,14 @@ So my final kext collection copied into the /EFI/Clover/kexts/other was as follo
 
 The config.plist is the main configuration file for the Hackintosh. In order to minimize the effects of it, I am going to delete the existing one on the EFI partition and import a new config.plist from a source.
 
-1. Open the following website : [Coffee Lake - /r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) — This is the Coffee Lake Config.plist guide. Read this article carefully as it documents what you need to know about each of the parameters. This is a .plist file that contains instructions for the boot loader. It can be edited either by directly modifying the code or by loading into an editor such as Clover Configurator.
-2. Go to the bottom of the webpage and click this link (sample config.plist ) : [Hackintosh-Guide/config.plist at master · corpnewt/Hackintosh-Guide · GitHub](https://github.com/corpnewt/Hackintosh-Guide/blob/master/Configs/CoffeeLake/config.plist)
-3. This will connect you to a GitHub site. Select \[Raw\]
-4. When a new page loads, Select All \[CMD-A\] and Copy the content \[CMD-C\].
+1. Open the following [website](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) — This is the Coffee Lake Config.plist guide. Read this article carefully as it documents what you need to know about each of the parameters. If you don't have a coffee Lake processor, read the section that pertains your CPU. This is a .plist file that contains instructions for the boot loader. It can be edited either by directly modifying the code or by loading into an editor such as Clover Configurator.
+2. Go to the bottom of the webpage and click this link [(sample config.plist)](https://github.com/corpnewt/Hackintosh-Guide/blob/master/Configs/CoffeeLake/config.plist)
+3. This will connect you to a GitHub site. Select **[Raw]**
+4. When a new page loads, Select All **[CMD-A]** and Copy the content **[CMD-C]**.
 5. Now open up TextEdit or TextWrangler.
-6. If using TextEdit, go to Format -> Make Plain Text
+6. If using TextEdit, go to *Format* -> *Make Plain Text*
 7. Paste the text in there and save the file as **config.plist** to the desktop.
-8. Now ensure that the newly formatted and prepared USB drive (with Clover Installer) is ready. This USB drive should have the UEFI drivers installed in the *EFI\_Clover\_Drivers64UEFI* and the kexts installed in /EFI/Clover/kexts/other.
-9. Now startup Clover Configurator and choose Mount EFI -> EFI partition of USB drive -> Mount Partition (if this hasn’t been done already).
-10. Navigate to /EFI/Clover/config.plist  and delete the existing file on the USB drive. This file was automatically created by the Clover Installer and **not** what we want. Copy the **config.plist** that you created by cutting and pasting text from the website above from Corpnewt to the location /EFI/Clover/config.plist. Choose yes to overwrite if asked.
-11. Right click on the config.plist and choose Open with -> Clover Configurator.
+8. Now ensure that the newly formatted and prepared USB drive (with Clover Installer) is ready. This USB drive should have the UEFI drivers installed in the **EFI/Clover/Drivers64UEFI** and the kexts installed in **/EFI/Clover/kexts/other**.
+9. Now startup Clover Configurator and choose *Mount EFI* -> *EFI partition of USB drive* -> *Mount Partition* (if this hasn’t been done already).
+10. Navigate to /EFI/Clover/config.plist and delete the existing file on the USB drive. This file was automatically created by the Clover Installer and is **not** what we want. Copy the **config.plist** that you created by cutting and pasting text from the website above from Corpnewt to the location /EFI/Clover/config.plist. Choose yes to overwrite if asked.
+11. Right click on the config.plist and choose *Open with* -> *Clover Configurator*.
