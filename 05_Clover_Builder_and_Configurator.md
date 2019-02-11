@@ -36,46 +36,41 @@ The above files are the most critical. I added three more drivers to enable vari
 
 
 # UEFI Drivers and Kexts
-Earlier, we installed the UEFI drivers. These are important drivers that get loaded before even MacOS is loaded into the system. There are another set of configuration information called Kexts. Kext files are basically the drivers for macOS. The word “Kext” is short for Kernel Extension. Kexts are an extension of the macOS kernel. When you boot up your machine the code contained in these kexts is automatically injected into the operating system. It’s like having drivers contained in a single file without having to install them like on Windows. When you want to uninstall a kext all you have to do is remove it (Source: [What are kext files in macOS? - Hackintosher](https://hackintosher.com/blog/kext-files-macos/)) A key thing to remember here is that normal Macs also use Kexts, and these are saved in /S*ystem/Library/Extensions* by default.  For this reason, I prefer to save my *modified* kexts elsewhere, so that there is no confusion about which ones come with the OS and which ones are introduced by a hackintosher. In the vanilla method, all of your kexts are stored in /EFI/Clover/kexts folder, completely separate from the rest of the OS. 
+Earlier, we installed the UEFI drivers. These are important drivers that get loaded before even MacOS is loaded into the system. In other words, UEFI drivers are the first drivers to be fed into the MacOS from the EFI partition as the system is starting. Then there are another set of configuration information called **Kexts**. Kext files are basically the drivers for macOS. The word “Kext” is short for *Kernel Extension*. When you boot up your machine the code contained in these kexts is automatically injected into the operating system, after the UEFI drivers get injected. It’s like having drivers contained in a single file without having to install them like on Windows. When you want to uninstall a kext all you have to do is remove it ([Source](https://hackintosher.com/blog/kext-files-macos/). A key thing to remember here is that normal Macs also use Kexts, and these are saved in */System/Library/Extensions* by default.  
 
+But in our hackintosh, all of the modified kexts that we introduce, will be housed in the EFI partition maintained completely separately from the kexts that typically belong to MacOS. In the vanilla method, all of your kexts are stored in /EFI/Clover/kexts folder which is inside of the hidden EFI partition, completely separate from the rest of the OS. 
   
 We are going to begin by gathering kexts for the Hackintosh. I’m only going to start with the bare essentials, because of the purpose is the keep the system running as close to a real Mac and lean as possible.   
 
+**NOTE: Clover configurator has a Kext Installer that we will look at. Personally, I prefer to install my kexts manually directly into the EFI partitions' /EFI/Clover/kexts folder.
 
-Clover Configurator (CC) has a Kext installer, but I prefer to do it manually.
 
 ## Gathering Kexts
+Most of the Kexts are available from the following repos: [Goldfish64 Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw) Once the following kexts have been downloaded and unzipped, I copy them directly into the /EFI/Clover/kexts/Other within the EFI partition of the boot loader drive that was prepared by Clover Builder.
 
-Most of the Kexts are available from the following repos: Goldfish64 Repo : [Microsoft OneDrive - Access files anywhere. Create docs with free Office Online.](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw) Once the following kexts have been downloaded and unzipped, I copy them directly into the /EFI/Clover/kexts/Other within the EFI partition of the boot loader drive that was prepared by Clover Builder.
 
 ## SMC
-
-*VirtualSMC.kext* \- Emulates the SMC chip on real macs. There is an alternate version called *FakeSMC.kext* which essentially does the same thing. FakeSMC is more tried and true, and VirtualSMC is the new kid in town. VirtualSMC also comes packaged with a UEFI driver (VirtualSMC-64.efi). If you remember, we installed this one earlier. They both have hardware monitors that can be used to monitor CPU temperature, speed, GPU function etc. Install **either** VirtualSMC or FakeSMC, not both.
+*VirtualSMC.kext* - Emulates the SMC chip on real macs. There is an alternate version called *FakeSMC.kext* which essentially does the same thing. FakeSMC is more tried and true, and VirtualSMC is the new kid in town. VirtualSMC also comes packaged with a UEFI driver (VirtualSMC-64.efi). If you remember, we installed this one earlier when we handled the UEFI drivers. They both have hardware monitors that can be used to monitor CPU temperature, speed, GPU function etc. Install **either** VirtualSMC or FakeSMC, not both.
 
 ## Graphics
-
 *WhateverGreen.kext, and* *Lilu.kext* Is a combined kext that incorporates the features a number of prior kexts that directly dealt with graphics from various cards and chipsets. They have now been combined to this one kext, along with its’ companion kext *Lilu.kext*.
 
 ## Ethernet
-
-*IntelMausiEthernet.kext* \- this works with most newer Intel LAN chipsets. This should work in the chipset for **Intel GbE LAN** which in in my motherboard. Your motherboard may have a different chipset. 
+*IntelMausiEthernet.kext* - this works with most newer Intel LAN chipsets. This should work in the chipset for **Intel GbE LAN** which in in my motherboard. Your motherboard may have a different chipset. 
 
 ## Audio
-
-*AppleALC.kext*  : This motherboard has the **Realtek ALC1220** Codec, which is supported by the *AppleALC.kext*.
+*AppleALC.kext*  : This motherboard has the **Realtek ALC1220** Codec which is supported by the *AppleALC.kext*. Your board may have a different audiot chipset, in which case you need to go to your motherboard manufacturer site and look up the correct chipset and find the corresponding kext for it.
 
 ## WiFi and Bluetooth
-
 Apple does not recognize the Intel WiFi chip so I am using a BCM93460 FenVi FV-T919 wifi/bluetooth card which should be supported directly out of the box.
 
 ## USB
+*USBInjectAll.kext* - is required. You’ll want to get [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/). If you’re on an H370, B360, and H310 Coffee Lake system, or an X79/X99/X299 you’ll likely want to make sure to include the *XHCI-unsupported.kext* as well. As of MacOS 10.11, Apple has imposed a 15 port limit on each USB controller. On Skylake and Coffeelake builds where USB 2 and 3 are handled only on XHCI, and each USB 3 port counts as 2, this limit can be reached quickly. This was one of my issues with my board. There is a way to route all USB 2 through EHCI though - utilizing [RehabMan’s FakePCIID.kext + FakePCIID\_XHCIMux.kext](https://github.com/RehabMan/OS-X-Fake-PCI-ID)  (it only works on some chipsets though, and not mine, unfortunately) which can take some of the pressure off the XHCI controller. ([Source](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts)).  For example, it appears that while the Z370 chipset does not have EHCI controller (and all of the USBs are routed via XHCI), some of the Z390 motherboard chipsets do have the ability handle routing via EHCI.
 
-*USBInjectAll.kext* \- is required. You’ll want to grab  [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/) . If you’re on an H370, B360, and H310 Coffee Lake system, or an X79/X99/X299 you’ll likely want to make sure to include the *XHCI-unsupported.kext* as well. As of MacOS 10.11, Apple has imposed a 15 port limit on each USB controller. On Skylake and Coffeelake builds where USB 2 and 3 are handled only on XHCI, and each USB 3 port counts as 2, this limit can be reached quickly. This was one of my issues with my board. There is a way to route all USB 2 through EHCI though - utilizing RehabMan’s  [FakePCIID.kext + FakePCIID\_XHCIMux.kext](https://github.com/RehabMan/OS-X-Fake-PCI-ID)  (it only works on some chipsets though, and not mine, unfortunately) which can take some of the pressure off the XHCI controller. (Source : [Gathering Kexts - /r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts)).  For example, it appears that while the Z370 chipset does not have EHCI controller (and all of the USBs are routed via XHCI), some of the Z390 motherboard chipsets do have the ability handle routing via EHCI.
+Handling USB issues ended up being one of my biggest problems but it was resolved, thanks to the hard work of some wonderful folks who had created some amazing tools (CorpNewt, Rehabman) . See my *[Troubleshooting](07_Troubleshooting.md)* section.
 
-Handling USB issues ended up being one of my biggest problems but it was resolved, thanks to the hard work of some wonderful folks who had created some amazing tools (CorpNewt, Rehabman) . See my *troubleshooting* section.
-
-So my final kext collection copied into the /EFI/Clover/kexts/other was as follows. You will note that there are multiple 10.xx folders in the kexts folder and a single “Other” folder. I deleted all of the other 10.xx folders since they are version specific, and the “Other” folder is universally accessed. Which is what I want.
-
+So my final kext collection copied into the /EFI/Clover/kexts/other was as follows: You will note that there are multiple 10.xx folders in the kexts folder and a single “Other” folder. I deleted all of the other 10.xx folders since they are version specific, and the “Other” folder is universally accessed. Which is what I want.
+```
     1. AppleALC.kext 
     2. IntelMausiEthernet.kext
     3. Lilu.kext
@@ -88,7 +83,9 @@ So my final kext collection copied into the /EFI/Clover/kexts/other was as follo
     10. USBInjectAll.kext
     11. XHCI-unsupported.kext
     12. GenericUSBXHCI.kext — I’m not sure whether this is redundant, but I read that this can enable injection of non-Intel USB ports. I have 2 USBc ports that are regulated via the ASMedia controller, so I activated them anyways. However it doesn’t appear to have worked. So you perhaps don’t need this.
-
+    ```
+    
+    
 # Changing Config.Plist
 
 The config.plist is the main configuration file for the Hackintosh. In order to minimize the effects of it, I am going to delete the existing one on the EFI partition and import a new config.plist from a source.
