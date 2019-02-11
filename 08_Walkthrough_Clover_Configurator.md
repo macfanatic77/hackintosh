@@ -41,7 +41,7 @@ The SSDT table is seen on the bottom right on the Boot secion for Clover Configu
 ## Devices
 
 ![](Pictures/cc_devices.png)
-###### Boot section of Clover
+###### Devices section of Clover
 
 
 - We are going to skip ahead to this section. This is a very important section also. Pay attention to the bottom right, and choose properties. This is where we will be changing some parameters associated with activating a headless iGPU.
