@@ -1,12 +1,14 @@
 # TROUBLESHOOTING
 
-This section represents my log of issues that I ran into and how I fixed each one of them. I am including this as a spoiler so open it up and read about them only if you had the same problems.
+This section represents my log of issues that I ran into and how I fixed each one of them. I am including this as a spoiler so open it up and read about them only if you had the same problems. Otherwise, you can continue on. It is obvious that some of these problems are specific to my build and may not apply to you. If you run into problems, post the questions on various hackintosh forums and ask someone. Search google. There is an excellent chance that someone else had the very same problem you did and may have found a solution.
 
-## Settings Changes were NOT taking effect after reboot.
 
+<summary>## Settings Changes were NOT taking effect after reboot.</summary>
+<details>
 On several occasions I ran into this weird bug where I would either remove a SSDT or DSDT patch and/or make a change and reboot the system, but the system would behave as if I didn’t make the change. I could not figure out until I found some information that it helps to boot into windows. Bizarre, right?
 
 When this didn’t happen, all I needed to do was to go into a Windows installation from Clover, play around a little bit, exit and reboot into MacOS and the problem was solved.
+</details>
 
 ## System Hangs during First Boot, even before the first graphics screen was visible.
 
