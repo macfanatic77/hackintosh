@@ -16,16 +16,16 @@
 
 # Checking to Ensure Everything is Working
 
-* First place to head over to is Apple Menu -> About this Mac -> System Report.
+* First place to head over to is *Apple Menu* -> *About this Mac* -> *System Report*.
 * Make sure that an Audio Device, Ethernet, Bluetooth and WiFi are working. These are the usual culprits and in my case Audio and Ethernet was functional, but Bluetooth and WiFi was not.
-* We will look at how to activate some of the other nonfunctioning systems out of the box, in the section on troubleshooting below.
+* We will look at how to activate some of the other nonfunctioning systems out of the box, in the section on [*Troubleshooting*](07_Troubleshooting.md).
 
 # Transferring functioning EFI folder from USB boot loader to EFI partition on SSD.
 
-* Assuming that everything is working, once everything is said and done, you should be ready to transfer the EFI partition from the USB drive to the SSD. This is because the SSD now has MacOS installed, but does not have a boot loader to inject the UEFI drivers and kexts during boot up. This information is in the EFI partition in the USB installer.
-* So have to repeat the previous process. However, don’t format the SSD (It already now has MacOS installed). So what we need to do is just run Clover Installer/Builder to create the boot loader.
-* Run it as we have done before on the USB drive, but under destination, now choose the SSD. Select the same options as we had done before.
-* The next part is a little bit different. You don’t need to download a config.plist or load clover. We’ve already painstakingly tweaked clover and config.plist along with the kexts that we need. All those tweaks are in the USB drive’s EFI partition.
-* So, using Clover Configurator, what you need to do is mount the EFI partitions in the USB drive that you loaded MacOS from, and the SSD to which you installed MacOS. Delete the EFI folder in the EFI partition inside the SSD and copy the EFI folder from the EFI partition in the USB. This should create a copy of the boot loader into the SSD.
+* Assuming that everything is working you should be ready to transfer the EFI partition from the USB drive to the SSD. This is because the SSD/HD where you installed MacOS into has the full operating system and can boot up a real Mac. But ours is not a real Mac, and in order to make this work, you have to give the information in the bootloader found in the USB to the hard drive/SSD so that we can boot up without having a USB stick.  
+* So we now have to repeat the previous process. However, don’t format the SSD (It already now has MacOS installed). So what we need to do is just run Clover Installer/Builder to create the boot loader.
+* Run it as we have done before on the USB drive, but under destination, now choose **the drive MacOS is installed into**. Select the same options as we had done before (UEFI drivers etc).
+* The next part is a little bit different. You don’t need to download a config.plist or load clover configurator. We’ve already painstakingly tweaked clover and config.plist along with the kexts that we need. All those tweaks are in the USB drive’s EFI partition.
+* So, using Clover Configurator, what you need to do is mount the EFI partitions in the USB drive that you loaded MacOS from, **and** EFI partition of the SSD to which you installed MacOS. Delete the EFI folder in the EFI partition inside the SSD/HD and copy the EFI folder from the USB drive into the EFI partition in the SSD/HD. This should create a copy of the boot loader into the SSD.
 * Now reboot your system. Remove the USB drive.
 * If everything went as planned, your system should boot from the SSD without the USB.
