@@ -8,7 +8,7 @@ If you are curious about using the command line, here is how you do it.
 
 On another Mac, start the Terminal (located in /Applications/Utilities) and type 
 
-'diskutil list'
+`diskutil list`
 
 This will give you a list of all the connected disks and their partitions. 
 
