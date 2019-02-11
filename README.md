@@ -23,7 +23,7 @@ This guide has been divided into sections which include a tutorial on how to ins
 
 # Table of Contents
 
-1. [The Basics of the Vanilla Method](../hackintosh/00_Basics of the Vanilla Method.md)
+1. [The Basics of the Vanilla Method](00_Basics of the Vanilla Method.md)
 2. My System Components
 3. External Guides and Resources Used (**Includes download links**)
 4. What Works and Doesn't Work in my Build
