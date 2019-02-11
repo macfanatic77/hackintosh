@@ -2,24 +2,33 @@
 
 # Download Clover Builder and Configurator
 
-1. Gather the download apps including **Clover Builder** [Releases · Dids/clover-builder · GitHub](https://github.com/Dids/clover-builder/releases) and **Clover Configurator** [Clover Configurator (Global Edition) | mackie100 projects](https://mackie100projects.altervista.org/download/ccg/).
+1. Gather the download apps including [**Clover Builder**](https://github.com/Dids/clover-builder/releases) and [**Clover Configurator**](https://mackie100projects.altervista.org/download/ccg/).
 2. Clover Builder (CB) is for creation of the bootloader on the USB drive
 3. Clover Configurator (CC) is to configure the config.plist file within that EFI partition which is an instruction set that configures the hackintosh.
-4. I Installed Clover\_v2.4k\_r4866.pkg  — You may have downloaded a newer version.
+
+If you are sketchy about this part, go read the section on the [Basics of the Vanilla Method.](00_Basics%20of%20the%20Vanilla%20Method.md)
+
+4. I Installed *Clover_v2.4k_r4866.pkg*  — You may have downloaded a newer version.
 5. Run Clover Installer. Once you get to the destination select, **remember to choose the USB drive** and not the default hard drive/SSD. Then remember to hit **customize**. This will enable you to select the following option in your installation.
 6. Choose **Clover for UEFI Booting Only**   
+
+![](Pictures/cb_screen1.png)
+###### Remember to check the "Clover for UEFI booting only"
+     
 
 
 1. Under **UEFI Drivers** chose the following options: 
 
+![](Pictures/cb_screen2.png)
+###### You can begin by selecting 3 UEFI drivers as discussed below.
+
 For Simplicity sake, to start off with, I will be only running 3 UEFI drivers:
 
 1. **APfsDriverLoader-64** :  This allows the boot loader (Clover) to see and boot from APFS volumes by loading APFS.efi. Usually in conjunction with AptioMemoryFix-64.
-2. **AptioMemoryFix-64** : This includes fixes for NVRAM and better memory management. This turns out to be a finicky beast. For my motherboard, I had no issues with this alone, but as I was tinkering with other boards, I found that this caused problems. There are several other alternate drivers including OsxAptioFixDrv.efi, OsxAptioFixDrv2.efi, OsxAptioFixDrv3.efi — these are not newer versions of the other, but rather three separate variants. If AptioMemoryFix-64 gives you trouble, try one of these.
+2. **AptioMemoryFix-64** : This includes fixes for NVRAM and better memory management. This turns out to be a finicky beast. For my motherboard, I had no issues with this alone, but as I was tinkering with other boards such as a the Gigabyte Z390 I found that this caused problems. There are several other alternate drivers including OsxAptioFixDrv.efi, OsxAptioFixDrv2.efi, OsxAptioFixDrv3.efi — these are not newer versions of the other, but rather three separate variants. If AptioMemoryFix-64 gives you trouble, try one of these, but don't assume one is better than the other.
 3. **HFSPlus.efi** (or VBoxHfs-64.efi) : These are required for Clover to see and boot from HFS+ volumes.  If you can’t see HFSPlus, don’t worry about it. We can install it later. Alternatively, if you see VBoxHfs-64, it does the same thing.
 
 The above files are the most critical. I added three more drivers to enable various functions.   
-
 
 **FSInject.efi** :  This was added automatically during installation so I never deleted it. It appears its function is to block files from being loaded and to inject files from pre-exit boot services for the kernel.   
 **NTFS-64.efi** : This enables the boot loader to see NTFS. 7.   
@@ -27,7 +36,6 @@ The above files are the most critical. I added three more drivers to enable vari
 
 
 # UEFI Drivers and Kexts
-
 Earlier, we installed the UEFI drivers. These are important drivers that get loaded before even MacOS is loaded into the system. There are another set of configuration information called Kexts. Kext files are basically the drivers for macOS. The word “Kext” is short for Kernel Extension. Kexts are an extension of the macOS kernel. When you boot up your machine the code contained in these kexts is automatically injected into the operating system. It’s like having drivers contained in a single file without having to install them like on Windows. When you want to uninstall a kext all you have to do is remove it (Source: [What are kext files in macOS? - Hackintosher](https://hackintosher.com/blog/kext-files-macos/)) A key thing to remember here is that normal Macs also use Kexts, and these are saved in /S*ystem/Library/Extensions* by default.  For this reason, I prefer to save my *modified* kexts elsewhere, so that there is no confusion about which ones come with the OS and which ones are introduced by a hackintosher. In the vanilla method, all of your kexts are stored in /EFI/Clover/kexts folder, completely separate from the rest of the OS. 
 
   
