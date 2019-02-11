@@ -24,7 +24,7 @@ This guide has been divided into sections which include a tutorial on how to ins
 # Table of Contents
 
 1. [The Basics of the Vanilla Method](00_Basics%20of%20the%20Vanilla%20Method.md)
-2. [My System Components] (00_System_Components.md)
+2. [My System Components](00_System_Components.md)
 3. External Guides and Resources Used (**Includes download links**)
 4. What Works and Doesn't Work in my Build
 5. BIOS Settings
