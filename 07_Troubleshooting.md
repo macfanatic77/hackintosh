@@ -2,35 +2,31 @@
 
 This section represents my log of issues that I ran into and how I fixed each one of them. I am including this as a spoiler so open it up and read about them only if you had the same problems. Otherwise, you can continue on. It is obvious that some of these problems are specific to my build and may not apply to you. If you run into problems, post the questions on various hackintosh forums and ask someone. Search google. There is an excellent chance that someone else had the very same problem you did and may have found a solution.
 
-<details>
-<summary> 1.  Settings Changes were NOT taking effect after reboot.</summary>
+## Settings Changes were NOT taking effect after reboot.
  
 On several occasions I ran into this weird bug where I would either remove a SSDT or DSDT patch and/or make a change and reboot the system, but the system would behave as if I didn’t make the change. I could not figure out until I found some information that it helps to boot into windows. Bizarre, right?
 
 When this didn’t happen, all I needed to do was to go into a Windows installation from Clover, play around a little bit, exit and reboot into MacOS and the problem was solved.
 
-</details>
 
-<details>
-<summary> 2.  System Hangs during First Boot, even before the first graphics screen was visible. </summary>
+
+## System Hangs during First Boot, even before the first graphics screen was visible.
  
 This is one of the first errors I encountered that frustrated the heck out of me.  I tweaked with a lot of memory drivers including deleting AptioMemoryFix.efi, adding OsxAptioFixDrv2, OsxAptioFixDrv3, EMUVariable64.efi etc, and nothing worked. Finally, it turned out I had upgraded my Gigabyte Motherboard BIOS to a version (F12c) that was causing this issue. I downgraded the BIOS to F11 and the system booted up immediately.
 
-</details>
-
-<details>
-<summary> 3. USB drives constantly get ejected during sleep and when computer wakes up drives have been improperly ejected</summary>
+## USB drives constantly get ejected during sleep and when computer wakes up drives have been improperly ejected.
  
-This was a much more interesting problem, and reportedly has to do with RAM management. I noticed that in the BIOS, if I turned off **XMP (Extended Memory Profile)** this problem went away. However, I did not want to do this since I fully intended to overclock my system. I then found a great post on TonyMacX86.com (USB drives getting ejected when Hackintosh wakes from sleep with XMP enabled | Page 2 | tonymacx86.com) which had the solution in this post that I linked. Basically, it turns out that the fastest Apple computers today (Jan 2019) the iMac Pro has only 2666 MHz DDR4 RAM, so you cannot go over that number in your base config. The solution was manually setting the RAM frequency down to 2666 MHz in the base config and then changing it up to 3200 MHz in the XMP and activating the XMP to Profile 1.  I am going to repost the relevant section from the BIOS that corresponds to this.
+This was a much more interesting problem, and reportedly has to do with RAM management. I noticed that in the BIOS, if I turned off **XMP (Extended Memory Profile)** this problem went away. However, I did not want to do this since I fully intended to overclock my system. I then found a great post on [TonyMacX86.com](https://www.tonymacx86.com/threads/usb-drives-getting-ejected-when-hackintosh-wakes-from-sleep-with-xmp-enabled.251488/page-2#post-1865336) which had the solution in this post that I linked. Basically, it turns out that the fastest Apple computers today (Jan 2019) the iMac Pro has only 2666 MHz DDR4 RAM, so you cannot go over that number in your base config. The solution was manually setting the RAM frequency down to 2666 MHz in the base config and then changing it up to 3200 MHz in the XMP and activating the XMP to Profile 1.  I am going to repost the relevant section from the BIOS that corresponds to this.
 
+So this meant I had to change the M.I.T. settings in my BIOS to reflect this:
 M.I.T. (You can ignore the M.I.T. settings if you don’t have the same memory frequency I have. I did this because I wanted to be able to enable XMP but this created a problem during boot up where the USB drives would get ejected when recovering from sleep-wake. The solution to this was to enable XMP but dial down the memory frequency to 2666 MHz as I have done below. However, this part is unnecessary if you don’t care about getting the best performance out of your memory).   
-\* -> Memory Frequency Settings  
- \* -> Extreme Memory Profile (X.M.P.) -> Profile1   
-\* -> System Memory Multiplier -> 26.66          
-\* -> Memory Ref Clock -> Auto   
-\* -> Memory Odd Ratio -> Auto   
-\* -> Memory Boot Mode -> Normal   
-\* -> Memory Frequency -> 2666 MHz 
+-> Memory Frequency Settings  
+.. -> Extreme Memory Profile (X.M.P.) -> Profile1   
+.. -> System Memory Multiplier -> 26.66          
+.. -> Memory Ref Clock -> Auto   
+.. -> Memory Odd Ratio -> Auto   
+.. -> Memory Boot Mode -> Normal   
+.. -> Memory Frequency -> 2666 MHz 
 
 </details>
 
