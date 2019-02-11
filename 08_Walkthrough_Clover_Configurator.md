@@ -4,7 +4,12 @@ I spent some time writing a walkthrough of Clover Configurator. I did this becau
 
 
 ## ACPI
+
+![](Pictures/cc_acpi.png)
+###### ACPI Section of Clover
+
 The first screen shows ACPI configuration. This includes DSDT and SSDT patches. ACPI (Advanced Configuration and Power Interface) is an industry specification for the efficient handling of power consumption in desktop and mobile computers. ACPI specifies how a computer’s basic input/output system, operating system, and peripheral devices communicate with each other about power usage. It provides an open standard that operating systems can use to discover and configure computer hardware components, to perform to perform power management by (for example) putting unused components to sleep, and to perform status monitoring. The ACPI is specified by two types of tables.
+      
  - **DSDT** : Differentiated System Description Table is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management..
  - **SSDT** : Secondary System Description Table, which is like an extended version of DSDT.
 
