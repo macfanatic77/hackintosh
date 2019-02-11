@@ -25,15 +25,15 @@ This guide has been divided into sections which include a tutorial on how to ins
 
 1. [The Basics of the Vanilla Method](00_Basics%20of%20the%20Vanilla%20Method.md)
 2. [My System Components](00_System_Components.md)
-3. External Guides and Resources Used (**Includes download links**)
-4. What Works and Doesn't Work in my Build
-5. BIOS Settings
-6. Creating a USB Installer with MacOS
-7. Clover Builder and Configurator
-8. Booting into MacOS for the First Time
-9. Troubleshooting
-10. A Walkthrough of Clover Configurator
-11. Cosmetic Changes on your new Hackintosh
+3. [External Guides and Resources Used](01_Guides_and_Resources.md) (**Includes download links**)
+4. [What Works and Doesn't Work in my Build](02_Functionality.md)
+5. [BIOS Settings](03_BIOS_Settings.md)
+6. [Creating a USB Installer with MacOS](04_Creating_USB_Installer.md)
+7. [Clover Builder and Configurator](05_Clover_Builder_and_Configurator.md)
+8. [Booting into MacOS for the First Time](06_Booting_into_MacOS.md)
+9. [Troubleshooting](07_Troubleshooting.md)
+10. [A Walkthrough of Clover Configurator](08_Walkthrough_Clover_Configurator.md)
+11. [Cosmetic Changes on your new Hackintosh](09_Cosmetic_Changes.md)
 12. My Personal Benchmarks
 13. Final Thoughts
 
