@@ -34,8 +34,8 @@ This guide has been divided into sections which include a tutorial on how to ins
 9. [Troubleshooting](07_Troubleshooting.md)
 10. [A Walkthrough of Clover Configurator](08_Walkthrough_Clover_Configurator.md)
 11. [Cosmetic Changes on your new Hackintosh](09_Cosmetic_Changes.md)
-12. My Personal Benchmarks
-13. Final Thoughts
+12. [My Personal Benchmarks](10_My_Benchmarks.md)
+13. [Final Thoughts and Updates](11_Final_Throughts.md)
 
 
 
