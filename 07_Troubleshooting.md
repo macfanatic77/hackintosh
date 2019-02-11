@@ -20,8 +20,8 @@ This was a much more interesting problem, and reportedly has to do with RAM mana
 
 So this meant I had to change the M.I.T. settings in my BIOS to reflect this:
 M.I.T. (You can ignore the M.I.T. settings if you don’t have the same memory frequency I have. I did this because I wanted to be able to enable XMP but this created a problem during boot up where the USB drives would get ejected when recovering from sleep-wake. The solution to this was to enable XMP but dial down the memory frequency to 2666 MHz as I have done below. However, this part is unnecessary if you don’t care about getting the best performance out of your memory).   
--> Memory Frequency Settings  
-.. -> Extreme Memory Profile (X.M.P.) -> Profile1   
+* -> Memory Frequency Settings  
+..* -> Extreme Memory Profile (X.M.P.) -> Profile1   
 .. -> System Memory Multiplier -> 26.66          
 .. -> Memory Ref Clock -> Auto   
 .. -> Memory Odd Ratio -> Auto   
