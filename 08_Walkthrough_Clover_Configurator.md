@@ -77,6 +77,7 @@ This section sets parameters for the Clover Boot Manager (CBM) GUI that shows up
 **Hide Volumes**: I haven't added anything here, but you can hide unwanted volumes here. You can do so by either adding the volume's name, or UUID. To hide extra APFS entries, add the following to this list:
 
 `Preboot` 
+
 `Recovery`
 
 
@@ -103,8 +104,11 @@ Make sure to replace diskXsY with the actual disk number of the volume you'd lik
 This screen shows a series of kext patches that were applied. I believe a lot of these kext patches have to do with increasing the port limit during various iterations of MacOS 10.x.x so as far as I am concerned the one that matters is really the AppleAHCIPort. This last one acts as an orange icons fix - when internal drives are hotpluggable, and treated as external drives. I believe the others can be removed safely (although I did not). For more information on what this is accomplishing, see my troubleshooting section on Custom SSDT for USB 2.0 and 3.0.
 
 Checkboxes: We have a couple checkboxes selected here:
-`Apple RTC` - this ensures that we don't have a BIOS reset on reboot. 
+
+`Apple RTC` - this ensures that we don't have a BIOS reset on reboot.
+
 `KernelPM` - this setting prevents writing to MSR 0xe2 which can prevent a kernel panic at boot.
+
 
 ## Rt Variables 
 ![](Pictures/cc_rtvariables.png)
