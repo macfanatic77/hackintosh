@@ -3,6 +3,12 @@
 ![](Pictures/IMG_20190209_184557.jpg)
       
 
+This build includes:
+Intel i7-8700k
+Gigabyte Z370 Aorus Gaming 5 Motherboard
+AMD RX Vega 64 Frontier Edition GPU
+64 GB RAM
+
 This guide was something I put together as I was trying to build a fully functional hackintosh for 4k Video editing. I am a primary Final Cut Pro X user, and my 2013-late Macbook Pro was beginning to show its age with rendering, timeline scrubbing so I thought it was time to upgrade to an iMac Pro until I was horrified when I found the prices I would be forced to pay.
 So I thought I would go the hackintosh route. I used the famous vanilla hackintosh subreddit here to get my feet wet and over the course of two weeks read pretty much every article I could find on the subject. After a lot of searching I managed to have a good understanding of how hackintoshes (and MacOS) works with the hardware and started writing things down. After a lot of time (close to a month of tinkering) I managed to complete this project with a *fully functional* hackintosh that cuts through 4K footage like butter. 
 
