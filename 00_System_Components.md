@@ -1,10 +1,11 @@
 # System Components #
 
-The most important part of building any hackintosh is choosing the right components. Those who try to wade these waters with untested hardware are in for a rude awakening. I spent >70% of my time researching the motherboard, CPU, Bluetooth/WiFi compatibility etc. Unfortunately, you are ultimately better off buying identical components to a build by someone else. I did something similar to this because I found that the Gigabyte Z370 Aorus Gaming 5 motherboard had been tried and tested and by the hackintosher community. It works, but not without its quirks. Below is my final config. 
+The most important part of building any hackintosh is choosing the right components. Those who try to wade these waters with untested hardware are in for a rude awakening. I spent >70% of my time researching the motherboard, CPU, Bluetooth/WiFi compatibility etc. Unfortunately, you are ultimately better off buying identical components to a build by someone else. I did something similar to this because I found that the Gigabyte Z370 Aorus Gaming 5 motherboard had been tried and tested by the hackintosher community. It works, but not without its quirks. Below is my final config. 
+
 1. Intel i7-8700k Coffee Lake 3.6 GHz CPU
 2. Gigabyte Z370 Aorus Gaming 5 Motherboard
 3. NZXT Kraken x62 AIO Cooler
-4. 64 GB Vengeance LPX 3200 MHz DDR4 RAM
+4. 64 GB Corsair Vengeance LPX 3200 MHz DDR4 RAM
 5. Samsung 970 EVO NVMe PCIe m.2 SSD 1 TB
 6. AMD Radeon Vega 64 Frontier Edition (16 GB HBM2)
 7. NZXT h500i Case
