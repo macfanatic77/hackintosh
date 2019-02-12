@@ -141,7 +141,7 @@ If you are using the Gigabyte Z370 Aorus Gaming 5 motherboard, this is the port 
     15. USR1 - Unknown
     16. USR2 - Uknown
 
-I have bold-faced above, the ports I decided to keep.
+The ports indicated by asterisks are the ports I decided to keep.
 
     HS03, SS03 
     HS04, SS04 
