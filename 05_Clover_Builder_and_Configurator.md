@@ -65,7 +65,7 @@ Most of the Kexts are available from the following repos: [Goldfish64 Repo](http
 Apple does not recognize the Intel WiFi chip so I am using a BCM93460 FenVi FV-T919 wifi/bluetooth card which should be supported directly out of the box.
 
 ## USB
-*USBInjectAll.kext* - is required. You’ll want to get [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/). If you’re on an H370, B360, and H310 Coffee Lake system, or an X79/X99/X299 you’ll likely want to make sure to include the *XHCI-unsupported.kext* as well. As of MacOS 10.11, Apple has imposed a 15 port limit on each USB controller. On Skylake and Coffeelake builds where USB 2 and 3 are handled only on XHCI, and each USB 3 port counts as 2, this limit can be reached quickly. This was one of my issues with my board. There is a way to route all USB 2 through EHCI though - utilizing [RehabMan’s FakePCIID.kext + FakePCIID\_XHCIMux.kext](https://github.com/RehabMan/OS-X-Fake-PCI-ID)  (it only works on some chipsets though, and not mine, unfortunately) which can take some of the pressure off the XHCI controller. ([Source](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts)).  For example, it appears that while the Z370 chipset does not have EHCI controller (and all of the USBs are routed via XHCI), some of the Z390 motherboard chipsets do have the ability handle routing via EHCI.
+*USBInjectAll.kext* - is required. You’ll want to get [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/). If you’re on an H370, B360, and H310 Coffee Lake system, or an X79/X99/X299 you’ll likely want to make sure to include the *XHCI-unsupported.kext* as well. As of MacOS 10.11, Apple has imposed a 15 port limit on each USB controller. On Skylake and Coffeelake builds where USB 2 and 3 are handled only on XHCI, and each USB 3 port counts as 2, this limit can be reached quickly. This was one of my issues with my board. 
 
 Handling USB issues ended up being one of my biggest problems but it was resolved, thanks to the hard work of some wonderful folks who had created some amazing tools (CorpNewt, Rehabman) . See my *[Troubleshooting](07_Troubleshooting.md)* section.
 
@@ -77,16 +77,14 @@ So my final kext collection copied into the /EFI/Clover/kexts/other was as follo
     3. Lilu.kext
     4. WhateverGreen.kext
     5. VirtualSMC.kext
-    6. SMCBatteryManager.kext
-    7. SMCLightSensor.kext
     8. SMCProcessor.kext
     9. SMCSuperIO.kext
     10. USBInjectAll.kext
-    11. XHCI-unsupported.kext
-    12. GenericUSBXHCI.kext — I’m not sure whether this is redundant, but I read that this can enable injection of non-Intel USB ports. I have 2 USBc ports that are regulated via the ASMedia controller, so I activated them anyways. However it doesn’t appear to have worked. So you perhaps don’t need this.
    
     
  ```
+ 
+ ** I updated the kext list to remove some of the unnecessary kexts I had in here (Thank you **midi1996**).
  
 # Changing Config.Plist
 
