@@ -103,3 +103,5 @@ The config.plist is the main configuration file for the Hackintosh. In order to 
 9. Now startup Clover Configurator and choose *Mount EFI* -> *EFI partition of USB drive* -> *Mount Partition* (if this hasn’t been done already).
 10. Navigate to /EFI/Clover/config.plist and delete the existing file on the USB drive. This file was automatically created by the Clover Installer and is **not** what we want. Copy the **config.plist** that you created by cutting and pasting text from the website above from Corpnewt to the location /EFI/Clover/config.plist. Choose yes to overwrite if asked.
 11. Right click on the config.plist and choose *Open with* -> *Clover Configurator*.
+
+If you want to find out more information on how to configure Clover Configurator, please read this article I wrote on a [Walkthrough of Clover Configurator](08_Walkthrough_Clover_Configurator.md)
