@@ -12,7 +12,7 @@ Below find a list of outside sources I utilized to learn about this process. If 
 
 I read the following articles to inform me about exactly what was happening under the hood.
 
-* [Config.plist Wiki](https://clover-wiki.zetam.org/Configuration#Config.plist-structure)
+* [Config.plist Wiki](https://sourceforge.net/p/cloverefiboot/wiki/Configuration/#configplist-structure)
 * [Corpnewts USBMap Script](https://github.com/corpnewt/USBMap) (I did not end up using this script although this makes the process insanely easy to generate your custom USB SSDT to enable USB ports. More later).
 * The portion on the Coffee Lake Processor and the components of this config.plist in this guide was priceless. [Coffee Lake - /r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake)
 * [An Idiots Guide to Lilu and its Plugins](https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/)
