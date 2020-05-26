@@ -2,7 +2,7 @@
 
 In the Vanilla method the objective is to install **all of the configuration** for the entire MacOS inside the EFI partition in the bootable drive (whether this is the USB drive, or eventually the hard drive in which your OS resides). This is different than some of other other standard methods for hackintosh installation that requires that these configuration files be placed within the operating system itself.
 
-![](http://cecs.wright.edu/~pmateti/Courses/4350/Lectures/SysProgs/Figures/bootloader.png)
+![](https://web1.cs.wright.edu/~pmateti/Courses/4350/Lectures/SysProgs/Figures/bootloader.png)
 ###### The above schematic shows how a bootloader interacts with the operating system. 
 
 For example, in the Unibeast/Multibeast method which has been a standard in hackintosh installation for a very long time, the configuration information can be split between the bootloader and between folders within the operating system (/system/library/extensions). This works well for the most part, until the operating system itself gets updated (a MacOS update for example), and the config information that is in the operating system folders can no longer be read or are modified by the update itself.
